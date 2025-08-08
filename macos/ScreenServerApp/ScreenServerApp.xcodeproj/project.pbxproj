@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E231FEAF2E4679AA00FA0528 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = E231FEAE2E4679AA00FA0528 /* WebRTC */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E20B1AF32E46A1A600E6D1BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E2951A592E460445009FCF64 /* ScreenServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenServerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,16 +28,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E231FEAF2E4679AA00FA0528 /* WebRTC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E20B1AF22E46A18C00E6D1BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E20B1AF32E46A1A600E6D1BA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2951A502E460445009FCF64 = {
 			isa = PBXGroup;
 			children = (
 				E2951A5B2E460445009FCF64 /* ScreenServerApp */,
+				E20B1AF22E46A18C00E6D1BA /* Frameworks */,
 				E2951A5A2E460445009FCF64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +80,7 @@
 			);
 			name = ScreenServerApp;
 			packageProductDependencies = (
+				E231FEAE2E4679AA00FA0528 /* WebRTC */,
 			);
 			productName = ScreenServerApp;
 			productReference = E2951A592E460445009FCF64 /* ScreenServerApp.app */;
@@ -94,6 +110,9 @@
 			);
 			mainGroup = E2951A502E460445009FCF64;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E231FEAD2E4679AA00FA0528 /* XCRemoteSwiftPackageReference "WebRTC" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E2951A5A2E460445009FCF64 /* Products */;
 			projectDirPath = "";
@@ -315,6 +334,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E231FEAD2E4679AA00FA0528 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 138.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E231FEAE2E4679AA00FA0528 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E231FEAD2E4679AA00FA0528 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2951A512E460445009FCF64 /* Project object */;
 }
